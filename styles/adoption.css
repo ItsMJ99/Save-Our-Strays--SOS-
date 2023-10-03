@@ -88,6 +88,14 @@ h2 {
     padding: 2rem;
 }
 
+.social-media-links {
+    margin: 2rem 2rem;
+}
+
+.social-media-links i {
+    margin: 2rem;
+}
+
 .back-design {
     padding: 6rem 0;
     width: 100%;

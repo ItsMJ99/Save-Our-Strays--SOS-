@@ -3,12 +3,13 @@ import { getFirestore, collection, addDoc } from "https://www.gstatic.com/fireba
 import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-storage.js";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID",
+  apiKey: "AIzaSyDOO3RjTQSBal26Cg2YPmFYQtKH_F61Bbg",
+  authDomain: "save-our-strays-sos-f91b7.firebaseapp.com",
+  projectId: "save-our-strays-sos-f91b7",
+  storageBucket: "save-our-strays-sos-f91b7.appspot.com",
+  messagingSenderId: "770130213214",
+  appId: "1:770130213214:web:afe9408f4f68b6fab677cf",
+  measurementId: "G-RKSPLK1SQN"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -29,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
           const fileRef = ref(storage, snapshot.ref.fullPath);
           getDownloadURL(fileRef)
             .then((url) => {
-            console.log('You here 123')
               addDoc(collection(db, 'User Registrations'), {
                 owner_fname: Req.o_fname.value,
                 owner_mname: Req.o_mname.value,
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 owner_state: Req.o_state.value,
                 owner_district: Req.o_district.value,
                 owner_pincode: Req.o_pincode.value,
-                animal_name: Req.s_name.value,
+                animal_name: Req.a_name.value,
                 animal_species: Req.a_species.value,
                 animal_breed: Req.a_breed.value,
                 animal_age: Req.a_age.value,
